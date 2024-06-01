@@ -1,1 +1,1 @@
-export const roomData = { name: `<td>床</td>` };
+export const roomData = { name: `Tile`, icon: "床" };
