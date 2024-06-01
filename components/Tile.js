@@ -1,3 +1,3 @@
 export default Tile = () => {
-  return <p>tile</p>;
+  return <td>tile</td>;
 };
