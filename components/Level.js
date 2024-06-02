@@ -6,11 +6,13 @@ export default Level = () => {
     <>
       <h3>level page</h3>
       <table>
+        <tbody>
         <tr>
           {roomData[0].map((room) => {
             <Tile tileData={room} />;
           })}
         </tr>
+        </tbody>
       </table>
     </>
   );
