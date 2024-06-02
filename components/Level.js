@@ -9,16 +9,13 @@ export default Level = () => {
     <>
       <h3>level page</h3>
       <table>
-        <tbody>
-          <tr>
-            {roomData.map((row) => (
-              row.map((column) => (
-<td>{column.icon}</td>
-              ))
-              
-            ))}
-          </tr>
-        </tbody>
+      {roomData.map((y, iy) => (
+      <tr>
+        {y.map((x, ix) => (
+          <td id={iy + "-" + ix}>{x.icon}</td>
+        ))}
+      </tr>
+    ))}
       </table>
     </>
   );
