@@ -7,7 +7,9 @@ export default Level = () => {
       <h3>level page</h3>
       <table>
         <tr>
-          <Tile tileData={roomData} />
+          {roomData[0].map((room) => {
+            <Tile tileData={room} />;
+          })}
         </tr>
       </table>
     </>
