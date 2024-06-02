@@ -11,9 +11,12 @@ export default Level = () => {
       <table>
         <tbody>
           <tr>
-            {roomData.map((row) => {
-              <Tile tileData={row[0]} />;
-            })}
+            {roomData.map((row) => (
+              row.map((column) => (
+<td>{column.icon}</td>
+              ))
+              
+            ))}
           </tr>
         </tbody>
       </table>
