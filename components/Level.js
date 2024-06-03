@@ -3,6 +3,8 @@ import { roomData } from "./roomData.js";
 import { tile } from "./Tile.js";
 
 export default Level = () => {
+  const heroX = 36;
+  const heroY = 42;
   const [maxWidth, setMaxWidth] = useState(roomData[0].length - 1);
   const [maxLength, setMaxLength] = useState(roomData.length - 1);
   const [minWidth, setMinWidth] = useState(1);
@@ -12,7 +14,8 @@ export default Level = () => {
     setMinWidth(minWidth + 1);
   };
 
-  
+  //document.getElementById("1x1").append("人");
+  console.log(document.getElementById("1x1"));
 
   return (
     <>
@@ -25,7 +28,11 @@ export default Level = () => {
             ))}
           </tr>
         ))}
+        <div className="heroTile">
+          <td>x</td>
+        </div>
       </table>
+
       <button onClick={moveHero}>右</button>
     </>
   );
