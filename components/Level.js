@@ -3,8 +3,8 @@ import { roomData } from "./roomData.js";
 import { tile } from "./Tile.js";
 
 export default Level = () => {
-  const [maxWidth, setMaxWidth] = useState(roomData.length - 1);
-  const [maxLength, setMaxLength] = useState(roomData[0].length - 1);
+  const [maxWidth, setMaxWidth] = useState(roomData[0].length - 1);
+  const [maxLength, setMaxLength] = useState(roomData.length - 1);
   const [minWidth, setMinWidth] = useState(1);
   const [minLength, setMinLength] = useState(1);
   return (
