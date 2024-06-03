@@ -8,7 +8,8 @@ export default Tile = ({ tileData, position }) => {
   } else {
     return (
       <td id={position}>
-        <div className="mapTile">人</div>
+        <div className="mapTile">{tileData.icon}</div>
+        <div className="mapHero">人</div>
       </td>
     );
   }
