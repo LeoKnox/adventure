@@ -11,6 +11,9 @@ export default Level = () => {
     setMaxWidth(maxWidth + 1);
     setMinWidth(minWidth + 1);
   };
+
+  
+
   return (
     <>
       <h3>level page</h3>
@@ -18,7 +21,7 @@ export default Level = () => {
         {roomData.slice(minLength, maxLength).map((y, iy) => (
           <tr>
             {y.slice(minWidth, maxWidth).map((x, ix) => (
-              <Tile tileData={x} />
+              <Tile tileData={x} position={`${iy}x${ix}`} />
             ))}
           </tr>
         ))}
