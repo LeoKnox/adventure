@@ -1,0 +1,17 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: gray;
+}
+
+table {
+  position: relative;
+}
+
+.heroTile {
+  color: orangered;
+  position: absolute;
+  font-weight: bold;
+  left: 20px;
+  top: 26px;
+}
