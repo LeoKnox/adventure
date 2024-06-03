@@ -1,6 +1,7 @@
 export const roomData = [
   // yuka floor 床 - kabe wall 壁
   [
+    { name: `Tile`, icon: "壁" },
     { name: `Tile`, icon: "床" },
     { name: `Tile`, icon: "床" },
     { name: `Tile`, icon: "床" },
@@ -8,8 +9,7 @@ export const roomData = [
     { name: `Tile`, icon: "床" },
     { name: `Tile`, icon: "床" },
     { name: `Tile`, icon: "床" },
-    { name: `Tile`, icon: "床" },
-    { name: `Tile`, icon: "床" },
+    { name: `Tile`, icon: "壁" },
   ],
   [
     { name: `Tile`, icon: "床" },
@@ -67,6 +67,7 @@ export const roomData = [
     { name: `Tile`, icon: "床" },
   ],
   [
+    { name: `Tile`, icon: "壁" },
     { name: `Tile`, icon: "床" },
     { name: `Tile`, icon: "床" },
     { name: `Tile`, icon: "床" },
@@ -74,7 +75,6 @@ export const roomData = [
     { name: `Tile`, icon: "床" },
     { name: `Tile`, icon: "床" },
     { name: `Tile`, icon: "床" },
-    { name: `Tile`, icon: "床" },
-    { name: `Tile`, icon: "床" },
+    { name: `Tile`, icon: "壁" },
   ],
 ];
