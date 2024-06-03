@@ -29,7 +29,7 @@ export default Level = () => {
           </tr>
         ))}
         <div className="heroTile">
-          <td>x</td>
+          <td>人</td>
         </div>
       </table>
 
