@@ -1,7 +1,9 @@
-export default Tile = ({ tileData }) => {
+export default Tile = ({ tileData, position }) => {
   return (
     <td>
-      <div className="mapTile">{tileData.icon}</div>
+      <div className="mapTile" id={position}>
+        {tileData.icon}
+      </div>
     </td>
   );
 };
