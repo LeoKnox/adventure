@@ -14,7 +14,7 @@ export default Level = () => {
         {roomData.slice(minLength, maxLength).map((y, iy) => (
           <tr>
             {y.slice(minWidth, maxWidth).map((x, ix) => (
-              <td id={iy + "-" + ix}>{x.icon}</td>
+              <Tile tileData={x} />
             ))}
           </tr>
         ))}
