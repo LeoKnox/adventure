@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import { roomData } from "./roomData.js";
 import { tile } from "./Tile.js";
 
@@ -11,9 +11,9 @@ export default Level = () => {
     <>
       <h3>level page</h3>
       <table>
-        {roomData.slice(minWidth, maxWidth).map((y, iy) => (
+        {roomData.slice(minLength, maxLength).map((y, iy) => (
           <tr>
-            {y.slice(minLength, maxLength).map((x, ix) => (
+            {y.slice(minWidth, maxWidth).map((x, ix) => (
               <td id={iy + "-" + ix}>{x.icon}</td>
             ))}
           </tr>
