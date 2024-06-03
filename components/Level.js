@@ -7,6 +7,10 @@ export default Level = () => {
   const [maxLength, setMaxLength] = useState(roomData.length - 1);
   const [minWidth, setMinWidth] = useState(1);
   const [minLength, setMinLength] = useState(1);
+  const moveHero = () => {
+    setMaxWidth(maxWidth + 1);
+    setMinWidth(minWidth + 1);
+  };
   return (
     <>
       <h3>level page</h3>
@@ -19,6 +23,7 @@ export default Level = () => {
           </tr>
         ))}
       </table>
+      <button onClick={moveHero}>右</button>
     </>
   );
 };
