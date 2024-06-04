@@ -12,13 +12,17 @@ export default Level = () => {
   const [minLength, setMinLength] = useState(1);
   //const heroLeft= document.getElementById("1x1").getBoundingClientRect.left;
 
-  const currentLevel = () => roomData.slice(minLength, maxLength).map((y, iy) => (
-    <tr>
-      {y.slice(minWidth, maxWidth).map((x, ix) => (
-        <Tile tileData={x} position={`${iy}x${ix}`} />
-      ))}
-    </tr>
-  ));
+  const currentLevel = () =>
+    roomData.slice(minLength, maxLength).map((y, iy) => (
+      <tr>
+        {y.slice(minWidth, maxWidth).map((x, ix) => (
+          <Tile tileData={x} position={`${iy}x${ix}`} />
+        ))}
+      </tr>
+    ));
+  const [left, setLeft] = useState(
+    document.getElementById("1x1").getBoundingClientRect.left
+  );
 
   const moveHero = () => {
     setMaxWidth(maxWidth + 1);
