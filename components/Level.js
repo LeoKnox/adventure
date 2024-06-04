@@ -24,7 +24,7 @@ export default Level = () => {
   };
 
   //document.getElementById("1x1").append("人");
-  console.log(document.getElementById("1x1"));
+  console.log(`id: ${document.getElementById("1x1")}`);
 
   return (
     <>
