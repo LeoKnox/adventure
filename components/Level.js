@@ -29,8 +29,9 @@ export default Level = () => {
     setMinWidth(minWidth + 1);
   };
 
-  //document.getElementById("1x1").append("人");
-  console.log(`id: ${document.getElementById("1x1")}`);
+
+    console.log(`id: ${document.getElementById("1x1")}`);
+
 
   return (
     <>
