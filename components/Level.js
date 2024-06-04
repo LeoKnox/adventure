@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { roomData } from "./roomData.js";
 import { tile } from "./Tile.js";
 
@@ -11,13 +11,16 @@ export default Level = () => {
   const [minWidth, setMinWidth] = useState(1);
   const [minLength, setMinLength] = useState(1);
   //const heroLeft= document.getElementById("1x1").getBoundingClientRect.left;
-  const currentLevel = roomData.slice(minLength, maxLength).map((y, iy) => (
+  useEffect(() => {
+  let currentLevel = roomData.slice(minLength, maxLength).map((y, iy) => (
     <tr>
       {y.slice(minWidth, maxWidth).map((x, ix) => (
         <Tile tileData={x} position={`${iy}x${ix}`} />
       ))}
     </tr>
   ));
+  }, []);
+
   const moveHero = () => {
     setMaxWidth(maxWidth + 1);
     setMinWidth(minWidth + 1);
