@@ -11,15 +11,14 @@ export default Level = () => {
   const [minWidth, setMinWidth] = useState(1);
   const [minLength, setMinLength] = useState(1);
   //const heroLeft= document.getElementById("1x1").getBoundingClientRect.left;
-  useEffect(() => {
-  let currentLevel = roomData.slice(minLength, maxLength).map((y, iy) => (
+
+  const currentLevel = () => roomData.slice(minLength, maxLength).map((y, iy) => (
     <tr>
       {y.slice(minWidth, maxWidth).map((x, ix) => (
         <Tile tileData={x} position={`${iy}x${ix}`} />
       ))}
     </tr>
   ));
-  }, []);
 
   const moveHero = () => {
     setMaxWidth(maxWidth + 1);
@@ -33,7 +32,7 @@ export default Level = () => {
     <>
       <h3>level page</h3>
       <table>
-        {currentLevel}
+        {currentLevel()}
         <div className="heroTile">
           <td>人</td>
         </div>
