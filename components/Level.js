@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { roomData } from "./roomData.js";
 import { tile } from "./Tile.js";
 
@@ -10,6 +10,13 @@ export default Level = () => {
   const [maxLength, setMaxLength] = useState(roomData.length - 1);
   const [minWidth, setMinWidth] = useState(1);
   const [minLength, setMinLength] = useState(1);
+  const heroPos = useRef(null);
+  useEffect(() => {
+    if (heroPos.current) {
+      console.log("t" + heroPos.current);
+      //setPos(heroPos.current.offsetHeight)
+    }
+  }, []);
   //const heroLeft= document.getElementById("1x1").getBoundingClientRect.left;
 
   const currentLevel = () =>
@@ -23,18 +30,19 @@ export default Level = () => {
   /*const [left, setLeft] = useState(
     document.getElementById("1x1").getBoundingClientRect.left
   );*/
-  const placeHero= () => {
-    return (<div className="heroTile">
-          <td>人</td>
-        </div>)
-  }
+  const placeHero = () => {
+    console.log(`id: ${document.getElementById("1x1")}`);
+    return (
+      <div className="heroTile">
+        <td>人</td>
+      </div>
+    );
+  };
 
   const moveHero = () => {
     setMaxWidth(maxWidth + 1);
     setMinWidth(minWidth + 1);
   };
-
-  console.log(`id: ${document.getElementById("1x1")}`);
 
   return (
     <>
