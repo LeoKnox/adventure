@@ -20,27 +20,28 @@ export default Level = () => {
         ))}
       </tr>
     ));
-  const [left, setLeft] = useState(
+  /*const [left, setLeft] = useState(
     document.getElementById("1x1").getBoundingClientRect.left
-  );
+  );*/
+  const placeHero= () => {
+    return (<div className="heroTile">
+          <td>人</td>
+        </div>)
+  }
 
   const moveHero = () => {
     setMaxWidth(maxWidth + 1);
     setMinWidth(minWidth + 1);
   };
 
-
-    console.log(`id: ${document.getElementById("1x1")}`);
-
+  console.log(`id: ${document.getElementById("1x1")}`);
 
   return (
     <>
       <h3>level page</h3>
       <table>
         {currentLevel()}
-        <div className="heroTile">
-          <td>人</td>
-        </div>
+        {placeHero()}
       </table>
 
       <button onClick={moveHero}>右</button>
