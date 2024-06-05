@@ -6,6 +6,7 @@ export default Level = () => {
   //document.getElementById("1x1").getBoundingClientRect.left
   const heroX = 36;
   const heroY = 42;
+  let xyz = 111;
   const [maxWidth, setMaxWidth] = useState(roomData[0].length - 1);
   const [maxLength, setMaxLength] = useState(roomData.length - 1);
   const [minWidth, setMinWidth] = useState(1);
@@ -13,7 +14,8 @@ export default Level = () => {
   const heroPos = useRef();
   useEffect(() => {
     if (heroPos.current) {
-      console.log("t" + heroPos.current);
+      console.log("t" + heroPos.current.offsetLeft);
+       xyz = heroPos.current.offsetTop;
       //setPos(heroPos.current.offsetHeight)
     }
   }, []);
@@ -51,7 +53,7 @@ export default Level = () => {
         {currentLevel()}
         {placeHero()}
       </table>
-
+{xyz}
       <button onClick={moveHero}>右</button>
     </>
   );
