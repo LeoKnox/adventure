@@ -10,7 +10,7 @@ export default Level = () => {
   const [maxLength, setMaxLength] = useState(roomData.length - 1);
   const [minWidth, setMinWidth] = useState(1);
   const [minLength, setMinLength] = useState(1);
-  const heroPos = useRef(null);
+  const heroPos = useRef();
   useEffect(() => {
     if (heroPos.current) {
       console.log("t" + heroPos.current);
@@ -47,7 +47,7 @@ export default Level = () => {
   return (
     <>
       <h3>level page</h3>
-      <table>
+      <table ref={heroPos}>
         {currentLevel()}
         {placeHero()}
       </table>
