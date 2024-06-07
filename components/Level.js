@@ -15,7 +15,11 @@ export default Level = () => {
   useEffect(() => {
     if (heroPos.current) {
       console.log("t" + heroPos.current.offsetLeft);
-      setXyz({x:heroPos.current.offsetLeft, y:heroPos.current.offsetTop});
+      setXyz({
+        x: heroPos.current.offsetLeft,
+        y: heroPos.current.offsetTop,
+        width: heroPos.current.offsetWidth,
+      });
       //setPos(heroPos.current.offsetHeight)
     }
   }, []);
@@ -53,7 +57,7 @@ export default Level = () => {
         {currentLevel()}
         {placeHero()}
       </table>
-      {xyz.x}:{xyz.y}
+      {xyz.x}:{xyz.y}&{xyz.width}
       <button onClick={moveHero}>右</button>
     </>
   );
