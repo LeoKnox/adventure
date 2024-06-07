@@ -19,6 +19,7 @@ export default Level = () => {
         x: heroPos.current.offsetLeft,
         y: heroPos.current.offsetTop,
         width: heroPos.current.offsetWidth,
+        height: heroPos.current.offsetHeight,
       });
       //setPos(heroPos.current.offsetHeight)
     }
@@ -57,7 +58,7 @@ export default Level = () => {
         {currentLevel()}
         {placeHero()}
       </table>
-      {xyz.x}:{xyz.y}&{xyz.width}
+      {xyz.x}:{xyz.y}&{xyz.width}:{xyz.height}
       <button onClick={moveHero}>右</button>
     </>
   );
