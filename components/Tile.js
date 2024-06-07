@@ -1,4 +1,4 @@
-export default Tile = ({ tileData, position }) => {
+export default Tile = ({ tileData, position, heroPos }) => {
   if (position != "0x0") {
     return (
       <td id={position}>
@@ -7,7 +7,7 @@ export default Tile = ({ tileData, position }) => {
     );
   } else {
     return (
-      <td id={position}>
+      <td id={position} ref={heroPos}>
         <div className="mapTile">{tileData.icon}</div>
       </td>
     );
