@@ -1,5 +1,5 @@
 export default Tile = ({ tileData, position }) => {
-  if (position !== "1x1") {
+  if (position != "0x0") {
     return (
       <td id={position}>
         <div className="mapTile">{tileData.icon}</div>
@@ -9,7 +9,6 @@ export default Tile = ({ tileData, position }) => {
     return (
       <td id={position}>
         <div className="mapTile">{tileData.icon}</div>
-        <div className="mapHero">人</div>
       </td>
     );
   }
