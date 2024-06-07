@@ -30,7 +30,7 @@ export default Level = () => {
     roomData.slice(minLength, maxLength).map((y, iy) => (
       <tr>
         {y.slice(minWidth, maxWidth).map((x, ix) => (
-          <Tile tileData={x} position={`${iy}x${ix}`} />
+          <Tile tileData={x} position={`${iy}x${ix}`} heroPos={heroPos} />
         ))}
       </tr>
     ));
@@ -54,7 +54,7 @@ export default Level = () => {
   return (
     <>
       <h3>level page</h3>
-      <table ref={heroPos}>
+      <table>
         {currentLevel()}
         {placeHero()}
       </table>
