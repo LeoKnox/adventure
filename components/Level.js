@@ -63,7 +63,7 @@ export default Level = () => {
         {currentLevel()}
         {placeHero()}
       </table>
-      {xyz.x}:{xyz.y}&{xyz.width}:{xyz.height}
+      <p>{xyz.x}:{xyz.y}&{xyz.width}:{xyz.height}</p>
       <button id="right" onClick={(e) => moveHero(e)}>
         右
       </button>
