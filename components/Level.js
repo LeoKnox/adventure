@@ -42,16 +42,18 @@ export default Level = () => {
     return (
       <div
         className="heroTile"
-        style={{ left: 3 * (xyz.width + 2), top: 2 * (xyz.height+2) }}
+        style={{ left: 3 * (xyz.width + 2), top: 2 * (xyz.height + 2) }}
       >
         <td>人</td>
       </div>
     );
   };
 
-  const moveHero = () => {
-    setMaxWidth(maxWidth + 1);
-    setMinWidth(minWidth + 1);
+  const moveHero = (e) => {
+    if (e.target.id == "right") {
+      setMaxWidth(maxWidth + 1);
+      setMinWidth(minWidth + 1);
+    }
   };
 
   return (
@@ -62,7 +64,9 @@ export default Level = () => {
         {placeHero()}
       </table>
       {xyz.x}:{xyz.y}&{xyz.width}:{xyz.height}
-      <button onClick={moveHero}>右</button>
+      <button id="right" onClick={(e) => moveHero(e)}>
+        右
+      </button>
     </>
   );
 };
