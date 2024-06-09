@@ -63,10 +63,28 @@ export default Level = () => {
         {currentLevel()}
         {placeHero()}
       </table>
-      <p>{xyz.x}:{xyz.y}&{xyz.width}:{xyz.height}</p>
-      <button id="right" onClick={(e) => moveHero(e)}>
-        右
-      </button>
+      <p>
+        {xyz.x}:{xyz.y}&{xyz.width}:{xyz.height}
+      </p>
+      <p>
+        <button id="up" onClick={(e) => moveHero(e)}>
+          上
+        </button>
+      </p>
+      <p>
+        <button id="left" onClick={(e) => moveHero(e)}>
+          左
+        </button>
+
+        <button id="right" onClick={(e) => moveHero(e)}>
+          右
+        </button>
+      </p>
+      <p>
+        <button id="down" onClick={(e) => moveHero(e)}>
+        下
+        </button>
+      </p>
     </>
   );
 };
