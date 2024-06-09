@@ -50,9 +50,21 @@ export default Level = () => {
   };
 
   const moveHero = (e) => {
+    if (e.target.id == "up") {
+      setMaxLength(maxLength - 1);
+      setMinLength(minLength - 1);
+    }
     if (e.target.id == "right") {
       setMaxWidth(maxWidth + 1);
       setMinWidth(minWidth + 1);
+    }
+    if (e.target.id == "left") {
+      setMaxWidth(maxWidth - 1);
+      setMinWidth(minWidth - 1);
+    }
+    if (e.target.id == "down") {
+      setMaxLength(maxLength + 1);
+      setMinLength(minLength + 1);
     }
   };
 
@@ -82,7 +94,7 @@ export default Level = () => {
       </p>
       <p>
         <button id="down" onClick={(e) => moveHero(e)}>
-        下
+          下
         </button>
       </p>
     </>
