@@ -40,7 +40,10 @@ export default Level = () => {
   const placeHero = () => {
     console.log(`id: ${document.getElementById("1x1")}`);
     return (
-      <div className="heroTile" style={{ left: 3*(xyz.width+2), top:2*(2+xyz.height) }}>
+      <div
+        className="heroTile"
+        style={{ left: 3 * (xyz.width + 2), top: 2 * (xyz.height+2) }}
+      >
         <td>人</td>
       </div>
     );
