@@ -6,6 +6,7 @@
 
 table {
   position: relative;
+  font-size: 2em;
 }
 
 td {
@@ -18,6 +19,6 @@ td {
   color: orangered;
   position: absolute;
   font-weight: bold;
-  left: 5em;
-  top: 3.4em;
+  /*left: 5em;
+  top: 3.4em;*/
 }
