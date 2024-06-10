@@ -15,17 +15,14 @@ export default Level = () => {
   const heroPos = useRef();
   useEffect(() => {
     if (heroPos.current) {
-      console.log("t" + heroPos.current.offsetLeft);
       setXyz({
         x: heroPos.current.offsetLeft,
         y: heroPos.current.offsetTop,
         width: heroPos.current.offsetWidth,
         height: heroPos.current.offsetHeight,
       });
-      //setPos(heroPos.current.offsetHeight)
     }
   }, []);
-  //const heroLeft= document.getElementById("1x1").getBoundingClientRect.left;
 
   const currentLevel = () =>
     roomData.slice(minLength, maxLength).map((y, iy) => (
@@ -35,11 +32,8 @@ export default Level = () => {
         ))}
       </tr>
     ));
-  /*const [left, setLeft] = useState(
-    document.getElementById("1x1").getBoundingClientRect.left
-  );*/
+
   const placeHero = () => {
-    console.log(`id: ${document.getElementById("1x1")}`);
     return (
       <div
         className="heroTile"
