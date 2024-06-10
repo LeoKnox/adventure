@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { roomData } from "./roomData.js";
+import HeroTile from "./HeroTile.js";
 import { tile } from "./Tile.js";
 
 export default Level = () => {
@@ -44,7 +45,7 @@ export default Level = () => {
         className="heroTile"
         style={{ left: 3 * (xyz.width + 2), top: 2 * (xyz.height + 2) }}
       >
-        <td>人</td>
+        <HeroTile />
       </div>
     );
   };
