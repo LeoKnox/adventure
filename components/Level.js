@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { roomData } from "./roomData.js";
 import HeroTile from "./HeroTile.js";
+import FighterSkills from "./FighterSkills.js";
 import { tile } from "./Tile.js";
 
 export default Level = () => {
@@ -70,9 +71,10 @@ export default Level = () => {
         {currentLevel()}
         {placeHero()}
       </table>
-      <p>
-        {xyz.x}:{xyz.y}&{xyz.width}:{xyz.height}
-      </p>
+      <div>
+        <h3>Fighter Skills</h3>
+        <FighterSkills />
+      </div>
       <p>
         <button id="up" onClick={(e) => moveHero(e)}>
           上
