@@ -3,8 +3,10 @@ export const heroData = {
   class: "fighter",
 };
 
-const redClick = () => {
-  alert("red");
+const redClick = ({param}) => {
+  alert(param);
 };
 
-export const fighter = <button onClick={redClick}>Red</button>;
+export const fighter = (param ) => {
+  return <button onClick={() => redClick(param)}>Red</button>;
+};
