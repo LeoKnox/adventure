@@ -1,3 +1,11 @@
+import { fighter } from "./heroData.js";
+
 export default FighterSkills = () => {
-  return <p>Attack</p>;
+  return (
+    <div>
+      <button>Attack</button>
+      <button>Defend</button>
+      {fighter}
+    </div>
+  );
 };
