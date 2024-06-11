@@ -3,4 +3,8 @@ export const heroData = {
   class: "fighter",
 };
 
-export const fighter = <button>Red</button>;
+const redClick = () => {
+  alert("red");
+};
+
+export const fighter = <button onClick={redClick}>Red</button>;
