@@ -5,7 +5,7 @@ export default FighterSkills = () => {
     <div>
       <button>Attack</button>
       <button>Defend</button>
-      {fighter}
+      {fighter({param:"RED"})}
     </div>
   );
 };
