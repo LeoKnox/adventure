@@ -9,4 +9,5 @@ const redClick = ({ param }) => {
 
 export const fighter = (param) => {
   return <button onClick={() => redClick(param)}>Red</button>;
+  //return <button onClick={() => redTest()}>Red</button>;
 };
