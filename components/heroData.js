@@ -1,4 +1,6 @@
-export const heroInfo = {
-    name: "Hero",
-    class: "fighter",
-}
+export const heroData = {
+  name: "Hero",
+  class: "fighter",
+};
+
+export const fighter = <button>Red</button>;
