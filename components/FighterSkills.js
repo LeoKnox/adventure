@@ -1,6 +1,7 @@
 import { fighter } from "./heroData.js";
 
 export default FighterSkills = () => {
+    const test="fighter"
   const redTest = () => {
     return "R" + "eD";
   };
