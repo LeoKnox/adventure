@@ -5,11 +5,10 @@ export const heroData = {
 };
 
 const redClick = ({ param }) => {
-  heroData.hp = heroData.hp - 19;
-  alert(param() + heroData.hp);
+  heroData.hp = heroData.hp - 8;
 };
 
 export const fighter = (param) => {
-  return <button onClick={() => redClick(param)}>Red</button>;
+  return <button onClick={() => redClick(param)}>Reverse</button>;
   //return <button onClick={() => redTest()}>Red</button>;
 };
