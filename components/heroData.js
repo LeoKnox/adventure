@@ -1,6 +1,7 @@
 export const heroData = {
   name: "Hero",
   class: "fighter",
+  hp: 48,
 };
 
 const redClick = ({ param }) => {
