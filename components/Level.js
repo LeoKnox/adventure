@@ -7,14 +7,16 @@ import { tile } from "./Tile.js";
 
 export default Level = () => {
   //document.getElementById("1x1").getBoundingClientRect.left
-  const heroX = 36;
-  const heroY = 42;
   const [xyz, setXyz] = useState(111);
   const [maxWidth, setMaxWidth] = useState(roomData[0].length - 1);
   const [maxLength, setMaxLength] = useState(roomData.length - 1);
   const [minWidth, setMinWidth] = useState(1);
   const [minLength, setMinLength] = useState(1);
   const heroPos = useRef();
+  const [herohp, setHerohp] = useState();
+  useEffect(() => {
+    setHerohp(heroData.hp);
+  }, [heroData.hp]);
   useEffect(() => {
     if (heroPos.current) {
       setXyz({
@@ -74,7 +76,9 @@ export default Level = () => {
       </table>
       <div>
         <h3>{heroData.class} Skills</h3>
-        <p>Name:{heroData.name} HP: {heroData.hp}</p>
+        <p>
+          Name:{heroData.name} HP: {herohp}
+        </p>
         <FighterSkills />
       </div>
       <p>
