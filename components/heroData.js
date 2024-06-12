@@ -6,7 +6,7 @@ export const heroData = {
 
 const redClick = ({ param }) => {
   heroData.hp = heroData.hp - 19;
-  alert(param());
+  alert(param() + heroData.hp);
 };
 
 export const fighter = (param) => {
