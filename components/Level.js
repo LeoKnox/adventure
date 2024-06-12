@@ -74,6 +74,7 @@ export default Level = () => {
       </table>
       <div>
         <h3>{heroData.class} Skills</h3>
+        <p>Name:{heroData.name} HP: {heroData.hp}</p>
         <FighterSkills />
       </div>
       <p>
