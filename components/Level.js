@@ -74,7 +74,7 @@ export default Level = () => {
         {currentLevel()}
         {placeHero()}
       </table>
-      <div>
+      <div id="blue">
         <h3>{heroData.class} Skills</h3>
         <p>
           Name:{heroData.name} HP: {herohp}
