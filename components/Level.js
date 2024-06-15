@@ -13,10 +13,10 @@ export default Level = () => {
   const [minWidth, setMinWidth] = useState(1);
   const [minLength, setMinLength] = useState(1);
   const heroPos = useRef();
-  const [herohp, setHerohp] = useState();
+  const [herohp, setHerohp] = useState(heroData.hp);
   useEffect(() => {
     setHerohp(heroData.hp);
-  }, [herohp]);
+  }, [heroData.hp]);
   useEffect(() => {
     if (heroPos.current) {
       setXyz({
