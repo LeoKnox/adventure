@@ -1,3 +1,3 @@
 export default HeroTile = () => {
-  return <td>人</td>;
+  return <td onMouseEnter={color="red"}>人</td>;
 };
