@@ -16,7 +16,7 @@ export default Level = () => {
   const [herohp, setHerohp] = useState();
   useEffect(() => {
     setHerohp(heroData.hp);
-  }, [heroData]);
+  }, [herohp]);
   useEffect(() => {
     if (heroPos.current) {
       setXyz({
