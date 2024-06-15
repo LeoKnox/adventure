@@ -1,3 +1,7 @@
+import {useState} from "react";
+
 export default HeroTile = () => {
-  return <td onMouseEnter={color="red"}>人</td>;
+const [hoverMenu, setHoverMenu] = useState("true")
+  return <td {hoverMenu ? <label>aka</label>:null}>人</td>;
+  //return <td onMouseEnter={(color = "blue")}>人</td>;
 };
