@@ -2,15 +2,25 @@ import { useState } from "react";
 
 export default HeroTile = () => {
   const [hoverMenu, setHoverMenu] = useState(false);
+  const playerMenu = () => {
+    return (
+        <>
+<select>
+    <option>attack</option>
+    <option>defend</option>
+    </select>
+    </>
+    )
+  }
   return (
     <>
       <td
         onMouseLeave={() => setHoverMenu(!hoverMenu)}
-        onMouseEnter={() => setHoverMenu(true)}
+        onMouseEnter={() => setHoverMenu(!hoverMenu)}
       >
         人
       </td>
-      {hoverMenu ? <label>ao</label> : null}
+      {hoverMenu ? {playerMenu} : null}
     </>
   );
 };
