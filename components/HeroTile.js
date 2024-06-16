@@ -5,10 +5,8 @@ export default HeroTile = () => {
   const playerMenu = () => {
     return (
       <>
-        <select id="heroSelection">
-          <option id="attack">attack</option>
-          <option id="defend">defend</option>
-        </select>
+        <button>Hit</button>
+        <button>Block</button>
       </>
     );
   };
