@@ -5,8 +5,10 @@ export default HeroTile = () => {
   const playerMenu = () => {
     return (
       <>
-        <option>attack</option>
-        <option>defend</option>
+        <select id="heroSelection">
+          <option id="attack">attack</option>
+          <option id="defend">defend</option>
+        </select>
       </>
     );
   };
@@ -18,7 +20,7 @@ export default HeroTile = () => {
       >
         人
       </td>
-      {hoverMenu ? <select>{playerMenu}</select> : null}
+      {hoverMenu ? { playerMenu } : null}
     </>
   );
 };
