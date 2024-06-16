@@ -4,14 +4,12 @@ export default HeroTile = () => {
   const [hoverMenu, setHoverMenu] = useState(false);
   const playerMenu = () => {
     return (
-        <>
-<select>
-    <option>attack</option>
-    <option>defend</option>
-    </select>
-    </>
-    )
-  }
+      <>
+        <option>attack</option>
+        <option>defend</option>
+      </>
+    );
+  };
   return (
     <>
       <td
@@ -20,7 +18,7 @@ export default HeroTile = () => {
       >
         人
       </td>
-      {hoverMenu ? {playerMenu} : null}
+      {hoverMenu ? <select>{playerMenu}</select> : null}
     </>
   );
 };
