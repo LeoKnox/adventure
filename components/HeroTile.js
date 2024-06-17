@@ -5,8 +5,8 @@ export default HeroTile = () => {
   const playerMenu = () => {
     return (
       <div>
-        <button>Hit</button>
-        <button>Block</button>
+        <label>Hit</label>
+        <label>Block</label>
       </div>
     );
   };
@@ -18,7 +18,7 @@ export default HeroTile = () => {
       >
         人
       </td>
-      {hoverMenu ? <playerMenu /> : null}
+      {hoverMenu ? { () =>playerMenu() } : null}
     </>
   );
 };
