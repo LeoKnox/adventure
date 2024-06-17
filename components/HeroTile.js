@@ -10,7 +10,7 @@ export default HeroTile = () => {
     );
   };
   return (
-    <>
+    <div>
       <td
         onMouseLeave={() => setHoverMenu(!hoverMenu)}
         onMouseEnter={() => setHoverMenu(!hoverMenu)}
@@ -18,6 +18,6 @@ export default HeroTile = () => {
         人
       </td>
       {playerMenu()}
-    </>
+    </div>
   );
 };
