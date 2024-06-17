@@ -5,7 +5,7 @@ export default HeroTile = () => {
   const playerMenu = () => {
     return (
       <button style={{ visibility: hoverMenu ? "visible" : "hidden" }}>
-        H
+        Hit
       </button>
     );
   };
@@ -17,7 +17,7 @@ export default HeroTile = () => {
       >
         人
       </td>
-      {playerMenu}
+      {playerMenu()}
     </>
   );
 };
