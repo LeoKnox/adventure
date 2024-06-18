@@ -1,7 +1,7 @@
-import { fighter } from "./heroData.js";
+import { fighter, redClick } from "./heroData.js";
 
 export default FighterSkills = () => {
-    const test="fighter"
+  const test = "fighter";
   const redTest = () => {
     return "R" + "eD";
   };
@@ -9,7 +9,7 @@ export default FighterSkills = () => {
     <div>
       <button>Attack</button>
       <button>Defend</button>
-      {fighter({ param: redTest })}
+      <button onClick={redClick}>hit</button>
     </div>
   );
 };
