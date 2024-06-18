@@ -17,6 +17,7 @@ export default FighterSkills = () => {
       <button>Defended</button>
       <Strike redTest={redTest} />
       <button onClick={() => redTest(8)}>hit</button>
+      <Strike redTest={() => redTest(8)} />
       {fighter(6)}
     </div>
   );
