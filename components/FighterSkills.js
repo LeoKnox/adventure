@@ -4,8 +4,8 @@ import { fighter, redClick } from "./heroData.js";
 export default FighterSkills = () => {
   const test = "fighter";
   const [akaHero, setAka] = useState({ name: "red", hp: 55 });
-  const redTest = () => {
-    setAka({ name: akaHero.name, hp: akaHero.hp - 1 });
+  const redTest = (damage=0) => {
+    setAka({ name: akaHero.name, hp: akaHero.hp - damage });
   };
   return (
     <div>
@@ -14,7 +14,7 @@ export default FighterSkills = () => {
       </p>
       <button>Attack</button>
       <button>Defended</button>
-      <button onClick={() => redTest()}>hit</button>
+      <button onClick={() => redTest(8)}>hit</button>
       {fighter(6)}
     </div>
   );
