@@ -4,7 +4,7 @@ export const heroData = {
   hp: 48,
 };
 
-const redClick = ({ param }) => {
+const redClick = ({ param=3 }) => {
   heroData.hp = heroData.hp - 8;
   alert(heroData.hp);
   return heroData.hp;
