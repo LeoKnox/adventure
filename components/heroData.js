@@ -5,9 +5,7 @@ export const heroData = {
   dam: 3,
 };
 
-export const getDam = () => {
-  return hero.dam;
-};
+export const getDam = heroData.dam;
 
 const redClick = ({ param = 100 }) => {
   heroData.hp = heroData.hp - 8;
