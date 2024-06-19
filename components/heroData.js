@@ -1,16 +1,21 @@
-import { fighter, redClick } from "./heroData.js";
+export const heroData = {
+  name: "Hero",
+  class: "fighter",
+  hp: 48,
+  dam: 3,
+};
 
-export default FighterSkills = () => {
-  const test = "fighter";
-  const redTest = () => {
-    return "R" + "eD";
-  };
-  return (
-    <div>
-      <button>Attack</button>
-      <button>Defended</button>
-      <button onClick={redClick}>hit</button>
-      {fighter(6)}
-    </div>
-  );
+export const getDam = () => {
+  return hero.dam;
+};
+
+const redClick = ({ param = 100 }) => {
+  heroData.hp = heroData.hp - 8;
+  alert(heroData.hp);
+  return heroData.hp;
+};
+
+export const fighter = (param) => {
+  return <button onClick={() => redClick(param)}>Reverse:{heroData.hp}</button>;
+  //return <button onClick={() => redTest()}>Red</button>;
 };
